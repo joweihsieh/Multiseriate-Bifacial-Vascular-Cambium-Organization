@@ -819,44 +819,26 @@ save_metric_boxplot(
   "Observed Xenium vs single-cell comparisons", "Euclidean distance"
 )
 
-save_metric_boxplot(
-  obs_plot_dt, "pearson",
-  OUT_PLOT_PEARSON_PDF, OUT_PLOT_PEARSON_PNG,
-  "Observed Xenium vs single-cell comparisons", "Pearson correlation"
-)
-
-save_metric_boxplot(
-  obs_plot_dt, "spearman",
-  OUT_PLOT_SPEARMAN_PDF, OUT_PLOT_SPEARMAN_PNG,
-  "Observed Xenium vs single-cell comparisons", "Spearman correlation"
-)
-
-save_metric_boxplot(
-  obs_plot_dt, "cosine_similarity",
-  OUT_PLOT_COSINE_PDF, OUT_PLOT_COSINE_PNG,
-  "Observed Xenium vs single-cell comparisons", "Cosine similarity"
-)
-
 match_dt <- rbindlist(list(
   observed_dt[
     xenium_group == "ray initials" & sc_group == "ray organizer",
-    .(label, sample_id, box_group = "matched", euclidean_distance, pearson, spearman, cosine_similarity)
+    .(label, sample_id, box_group = "matched", euclidean_distance)
   ],
   observed_dt[
     xenium_group == "fusiform initials" & sc_group == "fusiform organizer",
-    .(label, sample_id, box_group = "matched", euclidean_distance, pearson, spearman, cosine_similarity)
+    .(label, sample_id, box_group = "matched", euclidean_distance)
   ],
   observed_dt[
     xenium_group == "phloem",
-    .(label, sample_id, box_group = "phloem control", euclidean_distance, pearson, spearman, cosine_similarity)
+    .(label, sample_id, box_group = "phloem control", euclidean_distance)
   ],
   observed_dt[
     xenium_group == "epidermis",
-    .(label, sample_id, box_group = "epidermis control", euclidean_distance, pearson, spearman, cosine_similarity)
+    .(label, sample_id, box_group = "epidermis control", euclidean_distance)
   ],
   perm_dt[
     xenium_group %in% c("ray initials", "fusiform initials"),
-    .(label, sample_id, perm_id, box_group = "shuffled sc control", euclidean_distance, pearson, spearman, cosine_similarity)
+    .(label, sample_id, perm_id, box_group = "shuffled sc control", euclidean_distance)
   ]
 ), fill = TRUE)
 
@@ -869,24 +851,6 @@ save_match_control_boxplot(
   match_dt, "euclidean_distance",
   OUT_PLOT_MATCH_EUC_PDF, OUT_PLOT_MATCH_EUC_PNG,
   "Matched comparisons versus control groups", "Euclidean distance"
-)
-
-save_match_control_boxplot(
-  match_dt, "pearson",
-  OUT_PLOT_MATCH_PEAR_PDF, OUT_PLOT_MATCH_PEAR_PNG,
-  "Matched comparisons versus control groups", "Pearson correlation"
-)
-
-save_match_control_boxplot(
-  match_dt, "spearman",
-  OUT_PLOT_MATCH_SPEAR_PDF, OUT_PLOT_MATCH_SPEAR_PNG,
-  "Matched comparisons versus control groups", "Spearman correlation"
-)
-
-save_match_control_boxplot(
-  match_dt, "cosine_similarity",
-  OUT_PLOT_MATCH_COS_PDF, OUT_PLOT_MATCH_COS_PNG,
-  "Matched comparisons versus control groups", "Cosine similarity"
 )
 
 ############################################################
