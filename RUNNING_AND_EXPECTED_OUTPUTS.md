@@ -128,7 +128,7 @@ The remaining numbered folders are downstream or complementary analyses. After e
 | `[5.2] Xenium_scRNA_ray_fusiform_lineage` | Xenium–scRNA organizer distances and statistical comparisons | Run R script `01`, then R script `02` |
 | `[6.1] Simulation` | Simulated uniseriate, multiseriate, and lineage-segregated models | Run R scripts `01`–`04` |
 | `[6.2] Fusiform_cambium_k2to4` | Fusiform-cambium subset clustering and inner/outer distributions | Run scripts `01`–`04` in order |
-| `[7] Xenium_Cosine_Similarity` | Spatial cosine-similarity analyses for one or two ROIs | Run R scripts `01`–`03` |
+| `[7] Xenium_Cosine_Similarity` | Spatial cosine-similarity analyses for each ROI | Run R scripts `01`–`03` |
 | `[8] Xenium_DEG` | Domain-level differential expression, heatmaps, annotation, and GO analysis | Run R scripts `01`–`02` |
 | `[9] snRNA_overlapping_rate` | Overlap-rate analysis between single-nucleus datasets | Run R script `01` |
 | `[10] Xenium_snRNA_correlation_GMM_DEG` | snRNA annotation, Xenium–snRNA correlation, GMM assignment, DEG, and heatmaps | Run R scripts `01`–`05` in order |
