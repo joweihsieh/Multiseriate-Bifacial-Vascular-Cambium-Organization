@@ -1,4 +1,6 @@
 #!/usr/bin/env Rscript
+# Outlier-filtered pairwise unpaired Welch’s t-tests with no multiple-testing adjustment.
+# For prespecified directional hypotheses, one-tailed P values were calculated as half of the corresponding two-tailed P values when the observed effect was in the hypothesized direction.
 
 suppressPackageStartupMessages({
   library(data.table)
