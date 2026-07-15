@@ -1,4 +1,4 @@
-###### Installation
+## Installation
 
 The repository contains R, Python, shell, and Snakemake workflows.
 
@@ -198,6 +198,6 @@ For the reported single-nucleus RNA-seq workflow, Cell Ranger resource limits we
 --localmem=128
 ```
 
-###### ToyData
+## ToyData
 
 https://www.dropbox.com/scl/fo/y740a9schxxmadct86ixp/AN1r1zqCBWoSPBmzRczyKaQ?rlkey=jbxsxdqcpuso5dzr560ou4qz4&dl=0
