@@ -59,17 +59,17 @@ stopifnot(nrow(bin_meta) == nrow(mat))
 # Feature selection (raw counts)
 # ----------------------------
 
-# 每個 gene 出現在多少個 bins（非零）— 不會轉成 dense
+# 
 detect_bins <- Matrix::colSums(mat > 0)
 
-# 由大到小排序
+# 
 ord <- order(detect_bins, decreasing = TRUE)
 
-# 取前 top_genes 個（避免超過總 gene 數）
+# 
 top_n <- min(opt$top_genes, length(ord))
 top_genes <- colnames(mat)[ord[seq_len(top_n)]]
 
-# 保險：移除可能的 NA（通常不會發生，但加了更穩）
+# 
 top_genes <- top_genes[!is.na(top_genes)]
 
 mat_use <- mat[, top_genes, drop = FALSE]
