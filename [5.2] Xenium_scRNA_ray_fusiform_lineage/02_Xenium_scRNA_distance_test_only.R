@@ -165,15 +165,7 @@ ttest_noout <- pairwise.t.test(
   pool.sd = FALSE
 )
 
-wilcox_noout <- pairwise.wilcox.test(
-  x = dt_no_outlier$euclidean_distance,
-  g = dt_no_outlier$comparison,
-  p.adjust.method = "none",
-  exact = FALSE
-)
-
 fwrite(pairwise_matrix_to_dt(ttest_noout$p.value), OUT_TTEST_NOOUT_TSV, sep = "\t")
-fwrite(pairwise_matrix_to_dt(wilcox_noout$p.value), OUT_WILCOX_NOOUT_TSV, sep = "\t")
 
 ############################################################
 # done
