@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated publication."
+title: "Multiseriate Bifacial Vascular Cambium Organization"
+type: software
+authors:
+  - family-names: "Hsieh"
+    given-names: "Jo-Wei Allison"
+repository-code: "https://github.com/joweihsieh/Multiseriate-Bifacial-Vascular-Cambium-Organization"
+license: MIT
